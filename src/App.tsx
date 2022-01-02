@@ -1,8 +1,14 @@
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyle } from 'styles/global';
+import { theme } from 'styles/theme';
+import Home from 'views/Home';
+
 function App() {
   return (
-    <div className="App">
-      <h1>Hello World</h1>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Home />
+    </ThemeProvider>
   );
 }
 
