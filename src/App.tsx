@@ -1,12 +1,14 @@
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from 'styles/global';
 import { theme } from 'styles/theme';
-import Home from 'views/Home';
+import Home from 'pages/Home';
+import { Header } from 'components/core/Header';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
+      <Header />
       <Home />
     </ThemeProvider>
   );

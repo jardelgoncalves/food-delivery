@@ -7,10 +7,10 @@ import * as Styles from './Header.styles';
 export function Header() {
   return (
     <Styles.Container>
-      <a href="/" aria-label="Logo">
-        <img src={Logo} alt="Logo" />
-      </a>
       <nav>
+        <a href="/" aria-label="Logo">
+          <img src={Logo} alt="Logo" />
+        </a>
         <ul>
           <li>
             <HeaderItem text="Home" path="/" isActive />
@@ -25,10 +25,10 @@ export function Header() {
             <HeaderItem text="Contact" path="/contact" />
           </li>
         </ul>
+        <Styles.BagButton hasItem aria-label="Bag">
+          <BsHandbag size={22} />
+        </Styles.BagButton>
       </nav>
-      <Styles.BagButton hasItem aria-label="Bag">
-        <BsHandbag size={22} />
-      </Styles.BagButton>
     </Styles.Container>
   );
 }
