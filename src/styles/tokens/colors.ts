@@ -1,4 +1,4 @@
-import type { Colors } from '@interfaces/colors';
+import type { Colors } from 'interfaces/colors';
 
 export const colors: Colors = {
   brand: {
