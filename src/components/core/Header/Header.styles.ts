@@ -1,17 +1,32 @@
 import styled, { css } from 'styled-components';
 
 export const Container = styled.header`
-  max-width: ${({ theme }) => theme.sizes.viewport.width};
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
   width: 100%;
   height: ${({ theme }) => theme.sizes.header.height};
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 auto;
+  z-index: ${({ theme }) => theme.layers.header};
+  backdrop-filter: blur(20px);
+
+  nav {
+    max-width: ${({ theme }) => theme.sizes.viewport.width};
+    width: 100%;
+    height: ${({ theme }) => theme.sizes.header.height};
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
 
   ${({ theme }) => css`
     @media (max-width: ${theme.breakpoints.md}) {
       padding: 0 1rem;
+
+      nav ul {
+        display: none;
+      }
     }
   `}
 
