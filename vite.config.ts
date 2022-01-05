@@ -5,6 +5,7 @@ import svgrPlugin from 'vite-plugin-svgr'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  publicDir: './public',
   plugins: [react(), tsconfigPaths(), svgrPlugin({
     svgrOptions: {
       icon: true,
