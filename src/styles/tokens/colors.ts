@@ -12,6 +12,11 @@ export const colors: Colors = {
       main: 'hsla(258, 85%, 47%, 1)',
     },
   },
+  context: {
+    rating: {
+      background: 'hsla(39, 98%, 68%, 1)',
+    },
+  },
   grayscale: {
     dark: {
       main: 'hsla(0, 0%, 18%, 1)',
@@ -26,7 +31,7 @@ export const colors: Colors = {
       main: 'hsla(0, 0%, 79%, 1)',
     },
     greyLight: {
-      main: 'hsla(229, 39%, 96%, 1)',
+      main: 'hsla(227, 38%, 95%, 1)',
     },
     greyVeryLight: {
       main: 'hsla(240, 100%, 99%, 1)',
