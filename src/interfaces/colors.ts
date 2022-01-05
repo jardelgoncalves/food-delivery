@@ -10,6 +10,11 @@ export type Colors = {
       main: string;
     };
   };
+  context?: {
+    rating?: {
+      background: string;
+    };
+  };
   grayscale: {
     dark: {
       main: string;
