@@ -3,7 +3,7 @@ import { ReactComponent as DeliveryIcon } from 'assets/delivery.svg';
 import { ReactComponent as HeartIcon } from 'assets/heart.svg';
 import * as Styles from './Intro.styles';
 
-function Intro() {
+export function Intro() {
   return (
     <Styles.Intro>
       <Styles.Grid>
@@ -32,5 +32,3 @@ function Intro() {
     </Styles.Intro>
   );
 }
-
-export default Intro;
