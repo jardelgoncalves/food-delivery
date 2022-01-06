@@ -27,10 +27,8 @@ export const Container = styled.div`
 
   p {
     font-size: ${({ theme }) => theme.typography.size.sm};
-  }
-
-  button {
-    margin-top: auto;
+    text-align: left;
+    width: 100%;
   }
 `;
 
@@ -42,6 +40,7 @@ export const Price = styled.span`
   color: ${({ theme }) => theme.colors.grayscale.dark.main};
   font-weight: bold;
   padding: 8px 0;
+  margin-top: auto;
 
   strong {
     margin-left: 8px;
