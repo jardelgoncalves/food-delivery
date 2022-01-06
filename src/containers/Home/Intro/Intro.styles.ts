@@ -23,6 +23,7 @@ export const Intro = styled.section`
 
   ${({ theme }) => css`
     @media (max-width: ${theme.breakpoints.md}) {
+      height: auto;
       h1 {
         font-size: 48px;
       }

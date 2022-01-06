@@ -3,8 +3,10 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 8px;
+  user-select: none;
 `;
 
 type ItemProps = {
