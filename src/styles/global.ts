@@ -28,6 +28,7 @@ export const GlobalStyle = createGlobalStyle`
 
   h1, h2, h3, h4, h5, h6 {
     font-family: ${({ theme }) => theme.typography.family.primary};
+    color: ${({ theme }) => theme.colors.grayscale.dark.main};
     font-weight: bold;
   }
 
