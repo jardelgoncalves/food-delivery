@@ -1,50 +1,25 @@
+import { useMemo, useState } from 'react';
 import { Categories } from 'components/core/Categories';
 import { ListProducts } from 'components/core/ListProduct';
-import type { Product } from 'interfaces/product';
+import { usePopularProductsApi } from 'useCases/products';
+
 import * as Styles from './PopularDishes.styles';
 
-const products: Product[] = [
-  {
-    id: '3dsd3',
-    name: 'Sicilian pizza',
-    ingredients: 'Dough, Mozzarella, Cheddar, Blue, Parmesan',
-    rating: 4,
-    price: 2490,
-    thumb: '/images/product/sicilian-pizza.png',
-  },
-  {
-    id: '3dsds',
-    name: 'Cheese Burger',
-    ingredients: 'Beef with cheese',
-    rating: 3,
-    price: 2690,
-    thumb: '/images/product/cheese-burger.png',
-  },
-  {
-    id: '3ds23',
-    name: 'Chocolate Ice Cream',
-    ingredients: 'chocolate',
-    rating: 5,
-    price: 2790,
-    thumb: '/images/product/ice-cream-chocolate.png',
-  },
-  {
-    id: '3d563',
-    name: 'Pepsi no sugar',
-    ingredients: '',
-    rating: 3,
-    price: 2290,
-    thumb: '/images/product/pepsi-no-sugar.png',
-  },
-];
+type CategoryItem = 'pizza' | 'sandwich' | 'drink' | 'ice-cream' | 'fries';
 
 export function PopularDishes() {
+  const [categoryActive, setCategoryActive] = useState<CategoryItem>('pizza');
+  const { products } = usePopularProductsApi();
+
+  const dishes = useMemo(() => {
+    return products.filter((product) => product.category === categoryActive);
+  }, [products, categoryActive]);
   return (
     <Styles.Container>
       <h2>Our Menu</h2>
       <h3>Our Popular Dishes</h3>
-      <Categories />
-      <ListProducts products={products} />
+      <Categories defaultValue={categoryActive} onSelect={setCategoryActive} />
+      <ListProducts products={dishes} />
     </Styles.Container>
   );
 }
