@@ -12,6 +12,9 @@ export function ListProducts({ products }: ListProductsProps) {
       {(products || []).map((product) => (
         <ProductCard key={product.id} {...product} />
       ))}
+      {!(products || []).length && (
+        <Styles.EmptyProduct>No products available</Styles.EmptyProduct>
+      )}
     </Styles.Container>
   );
 }

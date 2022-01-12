@@ -9,3 +9,8 @@ export const Container = styled.div`
   margin-top: 64px;
   gap: 36px;
 `;
+
+export const EmptyProduct = styled.p`
+  text-align: center;
+  color: ${({ theme }) => theme.colors.grayscale.greyMedium.main};
+`;
