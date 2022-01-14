@@ -7,6 +7,7 @@ import { theme } from 'styles/theme';
 import store from 'store';
 
 import Home from 'pages/Home';
+import { Footer } from 'components/core/Footer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <GlobalStyle />
         <Header />
         <Home />
+        <Footer />
       </ThemeProvider>
     </Provider>
   );
