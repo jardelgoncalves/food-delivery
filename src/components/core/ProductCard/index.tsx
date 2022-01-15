@@ -1,12 +1,11 @@
-import type { Product } from 'interfaces/product';
+import { addInCart } from 'features/cart/cart-slice';
+import { Product } from 'interfaces/product';
 import { currencyFormatter } from 'lib/format-number';
+import { useDispatch } from 'react-redux';
 import { AddCart } from '../AddCart';
 import { Rating } from '../Rating';
 import * as Styles from './ProductCard.styles';
 
-type ProductCardProps = Product & {
-  addToCart?: (product: Product) => void;
-};
 export function ProductCard({
   id,
   thumb,
@@ -16,8 +15,9 @@ export function ProductCard({
   ingredients,
   rating,
   price,
-  addToCart,
-}: ProductCardProps) {
+}: Product) {
+  const dispatch = useDispatch();
+
   return (
     <Styles.Container>
       <img src={thumb} alt={name} />
@@ -29,16 +29,18 @@ export function ProductCard({
       </Styles.Price>
       <AddCart
         onClick={() =>
-          addToCart?.({
-            id,
-            thumb,
-            name,
-            category,
-            popular,
-            ingredients,
-            rating,
-            price,
-          })
+          dispatch(
+            addInCart({
+              id,
+              thumb,
+              name,
+              category,
+              popular,
+              ingredients,
+              rating,
+              price,
+            })
+          )
         }
       />
     </Styles.Container>
