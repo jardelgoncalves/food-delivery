@@ -39,7 +39,7 @@ export const Price = styled.span`
   font-family: ${({ theme }) => theme.typography.family.primary};
   color: ${({ theme }) => theme.colors.grayscale.dark.main};
   font-weight: bold;
-  padding: 8px 0;
+  padding: 0 0 8px 0;
   margin-top: auto;
 
   strong {
