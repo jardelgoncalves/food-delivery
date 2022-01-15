@@ -83,19 +83,20 @@ export const BagButton = styled.button<BagButtonProps>`
   border: none;
   background-color: transparent;
   position: relative;
+`;
 
-  ${({ hasItem, theme }) =>
-    hasItem &&
-    css`
-      &::after {
-        content: '';
-        position: absolute;
-        right: -2px;
-        top: 0;
-        height: 12px;
-        width: 12px;
-        border-radius: 12px;
-        background-color: ${theme.colors.brand.primary.main};
-      }
-    `}
+export const NotificationItem = styled.div`
+  position: absolute;
+  right: -6px;
+  top: -4px;
+  height: 16px;
+  width: 16px;
+  border-radius: 16px;
+  background-color: ${({ theme }) => theme.colors.brand.primary.main};
+  font-size: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: ${({ theme }) => theme.colors.grayscale.offWhite.main};
 `;

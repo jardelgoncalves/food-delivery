@@ -27,7 +27,7 @@ export function Footer() {
               <h2>Feature</h2>
               <Link to="/menu">Menu</Link>
               <Link to="/contact">Contact</Link>
-              <Link to="/about">About Us</Link>
+              <Link to="/about-us">About Us</Link>
             </Styles.FeatureSection>
           </li>
           <li>
