@@ -199,5 +199,9 @@ export default createServer({
     this.get('/products-popular', () => {
       return this.db.products.where({ popular: true });
     });
+
+    this.get('/products', () => {
+      return this.db.products;
+    });
   },
 });
