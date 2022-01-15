@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import { GoLocation } from 'react-icons/go';
 import { FiMail, FiPhone } from 'react-icons/fi';
 import { FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
@@ -11,9 +13,9 @@ export function Footer() {
         <ul>
           <li>
             <Styles.BrandSection>
-              <a href="/" aria-label="Logo">
+              <Link to="/" aria-label="Logo">
                 <img src={Logo} alt="Logo" />
-              </a>
+              </Link>
               <p>
                 Our job is to filling yout tummy with delicious food and with
                 fast and free delivery.
@@ -23,9 +25,9 @@ export function Footer() {
           <li>
             <Styles.FeatureSection>
               <h2>Feature</h2>
-              <a href="#/">Menu</a>
-              <a href="#/">Contact</a>
-              <a href="#/">About Us</a>
+              <Link to="/menu">Menu</Link>
+              <Link to="/contact">Contact</Link>
+              <Link to="/about">About Us</Link>
             </Styles.FeatureSection>
           </li>
           <li>
