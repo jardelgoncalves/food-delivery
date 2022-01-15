@@ -1,28 +1,45 @@
+import { Link, useLocation } from 'react-router-dom';
+
 import { BsHandbag } from 'react-icons/bs';
 import Logo from 'assets/logo.png';
-import { HeaderItem } from './HeaderItem';
 
 import * as Styles from './Header.styles';
 
 export function Header() {
+  const { pathname } = useLocation();
+
   return (
     <Styles.Container>
       <nav>
-        <a href="/" aria-label="Logo">
+        <Link to="/" aria-label="Logo">
           <img src={Logo} alt="Logo" />
-        </a>
+        </Link>
         <ul>
           <li>
-            <HeaderItem text="Home" path="/" isActive />
+            <Link to="/" className={pathname === '/' ? '--active' : ''}>
+              Home
+            </Link>
           </li>
           <li>
-            <HeaderItem text="Menu" path="/menu" />
+            <Link to="/menu" className={pathname === '/menu' ? '--active' : ''}>
+              Menu
+            </Link>
           </li>
           <li>
-            <HeaderItem text="About Us" path="/about-us" />
+            <Link
+              to="/about-us"
+              className={pathname === '/about-us' ? '--active' : ''}
+            >
+              About Us
+            </Link>
           </li>
           <li>
-            <HeaderItem text="Contact" path="/contact" />
+            <Link
+              to="/contact"
+              className={pathname === '/contact' ? '--active' : ''}
+            >
+              Contact
+            </Link>
           </li>
         </ul>
         <Styles.BagButton hasItem aria-label="Bag">
