@@ -1,7 +1,9 @@
 <div align="center">
-  <img alt="Logo" src="./src/assets/logo.png">
-  <br />
-  <p>Be the fastest in delivering your food</p>
+  <img alt="Cover" src="./public/cover.png">
+</div>
+
+<div align="center">
+  <img alt="Ui Home" src="./public/ui-home.png">
 </div>
 
 ## Maybe you ask yourself: why Redux?
